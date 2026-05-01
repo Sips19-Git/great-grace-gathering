@@ -7,6 +7,7 @@ import img4 from "@/assets/photo-choir.jpg";
 import img5 from "@/assets/photo-worship-team.jpg";
 import img6 from "@/assets/photo-seated.jpg";
 
+const VISIT_LINK = "https://share.google/zR3CGAEvPSyPZ7Gh4";
 const images = [hero, img2, img3, img4, img5, img6];
 
 export const Hero = () => {
@@ -64,12 +65,12 @@ export const Hero = () => {
             <p className="font-italiana text-cream-deep text-xl md:text-2xl mb-6 italic">
               — Transforming lives through the gospel to impact the community
             </p>
-            <h1 className="font-display text-[18vw] md:text-[12vw] lg:text-[10rem] leading-[0.85] tracking-tight">
-              FAITH<span className="text-primary">.</span>
+            <h1 className="font-display text-[15vw] md:text-[10vw] lg:text-[8rem] leading-[0.9] tracking-tighter uppercase" style={{ fontWeight: 900 }}>
+              Courageous<span className="text-primary">.</span>
               <br />
-              FAMILY<span className="text-primary">.</span>
+              Faith<span className="text-primary">.</span>
               <br />
-              <span className="text-stroke-cream">FUTURE.</span>
+              <span className="text-stroke-cream">Family.</span>
             </h1>
           </div>
 
@@ -86,7 +87,9 @@ export const Hero = () => {
                 <Play className="w-4 h-4 fill-current" /> Watch Latest
               </a>
               <a
-                href="#visit"
+                href={VISIT_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border border-white/50 text-white px-6 py-3.5 rounded-full font-semibold hover:bg-white hover:text-ink transition-colors group"
               >
                 Plan a Visit
