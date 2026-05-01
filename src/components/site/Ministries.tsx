@@ -17,7 +17,7 @@ const ministries = [
 ];
 
 const MinistryCard = ({ m, index }: { m: typeof ministries[0]; index: number }) => {
-  const { ref, isVisible } = useScrollAnimation(0.1);
+  const { ref, isVisible } = useScrollAnimation<HTMLAnchorElement>(0.1);
 
   return (
     <a
