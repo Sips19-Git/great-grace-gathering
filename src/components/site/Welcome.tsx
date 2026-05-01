@@ -68,9 +68,6 @@ export const Welcome = () => {
               <div className="text-sm text-white/80 tracking-widest uppercase">Lead Pastor</div>
             </div>
           </div>
-          <div className="absolute -top-6 -left-6 hidden md:block bg-highlight text-highlight-foreground px-5 py-3 rounded-full font-display text-xl rotate-[-6deg] shadow-card">
-            ✦ since 2010
-          </div>
         </div>
       </div>
     </section>

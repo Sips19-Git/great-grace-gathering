@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Youtube, Music2, MapPin, Mail } from "lucide-react";
+import { Facebook, Instagram, Youtube, Music2, MapPin, Mail, Phone } from "lucide-react";
+import logo from "@/assets/logo-ggc.png";
 
 const cols = [
   { label: "Quick Links", links: ["Home", "About", "Sermons", "Events", "Give", "Contact"] },
@@ -26,9 +27,11 @@ export const Footer = () => {
         <div className="grid grid-cols-12 gap-10">
           <div className="col-span-12 lg:col-span-4">
             <div className="flex items-center gap-2.5 mb-5">
-              <span className="w-10 h-10 rounded-xl bg-primary text-primary-foreground grid place-items-center font-display text-lg font-bold tracking-tight shadow-md">
-                GGC
-              </span>
+              <img
+                src={logo}
+                alt="Great Grace Church Logo"
+                className="w-10 h-10 rounded-[30%] object-cover shadow-md"
+              />
               <span className="font-display text-xl tracking-wide">GREAT GRACE CHURCH</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-xs">
@@ -41,6 +44,9 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2.5 text-muted-foreground">
                 <Mail className="w-4 h-4 text-primary shrink-0" /> gracegreat121@gmail.com
+              </li>
+              <li className="flex items-center gap-2.5 text-muted-foreground">
+                <Phone className="w-4 h-4 text-primary shrink-0" /> 018 384 5465
               </li>
             </ul>
           </div>
@@ -77,6 +83,28 @@ export const Footer = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Map Section */}
+        <div className="mt-16 pt-8 border-t border-border">
+          <h3 className="text-xs tracking-[0.2em] uppercase text-foreground font-bold mb-5 text-center">Find Us</h3>
+          <div className="rounded-2xl overflow-hidden shadow-card aspect-[16/6] md:aspect-[16/5]">
+            <iframe
+              title="Great Grace Church Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3553.0!2d25.6!3d-25.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDUxJzAwLjAiUyAyNcKwMzYnMDAuMCJF!5e0!3m2!1sen!2sza!4v1700000000000"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            />
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-4">
+            <MapPin className="w-4 h-4 inline-block mr-1 text-primary" />
+            GGC Mmabatho, Unit 15, 6895 Cydonia Street, Mahikeng
+          </p>
         </div>
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-4 text-xs text-muted-foreground">

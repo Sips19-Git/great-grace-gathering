@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import logo from "@/assets/logo-ggc.png";
+
+const VISIT_LINK = "https://share.google/zR3CGAEvPSyPZ7Gh4";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -33,9 +36,11 @@ export const Navbar = () => {
       >
         <nav className="max-w-site mx-auto container-x flex items-center justify-between h-16 md:h-20">
           <a href="#home" className="flex items-center gap-2.5 group">
-            <span className="w-10 h-10 rounded-xl bg-primary text-primary-foreground grid place-items-center font-display text-lg font-bold tracking-tight shadow-md">
-              GGC
-            </span>
+            <img
+              src={logo}
+              alt="Great Grace Church Logo"
+              className="w-10 h-10 rounded-[30%] object-cover shadow-md"
+            />
             <span
               className={`font-display text-xl tracking-wide transition-colors ${
                 scrolled ? "text-foreground" : "text-white"
@@ -62,7 +67,9 @@ export const Navbar = () => {
 
           <div className="flex items-center gap-3">
             <a
-              href="#visit"
+              href={VISIT_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-primary-glow transition-colors group"
             >
               Plan a Visit
@@ -89,9 +96,11 @@ export const Navbar = () => {
       >
         <div className="container-x flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-2.5">
-            <span className="w-10 h-10 rounded-xl bg-primary text-primary-foreground grid place-items-center font-display text-lg font-bold tracking-tight">
-              GGC
-            </span>
+            <img
+              src={logo}
+              alt="Great Grace Church Logo"
+              className="w-10 h-10 rounded-[30%] object-cover"
+            />
             <span className="font-display text-xl">GREAT GRACE CHURCH</span>
           </div>
           <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2">
@@ -113,7 +122,9 @@ export const Navbar = () => {
           <li className="mt-6">
             <a
               onClick={() => setOpen(false)}
-              href="#visit"
+              href={VISIT_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold"
             >
               Plan a Visit <ArrowUpRight className="w-4 h-4" />
