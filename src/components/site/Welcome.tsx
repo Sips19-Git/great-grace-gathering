@@ -1,10 +1,18 @@
 import { ArrowUpRight } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import pastor from "@/assets/photo-pastor.jpg";
 
 export const Welcome = () => {
+  const { ref, isVisible } = useScrollAnimation(0.15);
+
   return (
     <section id="welcome" className="bg-background py-24 md:py-32">
-      <div className="max-w-site mx-auto container-x grid grid-cols-12 gap-8 lg:gap-16 items-center">
+      <div
+        ref={ref}
+        className={`max-w-site mx-auto container-x grid grid-cols-12 gap-8 lg:gap-16 items-center transition-all duration-1000 ease-out ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="col-span-12 lg:col-span-7 order-2 lg:order-1">
           <div className="flex items-center gap-3 mb-6">
             <span className="w-10 h-px bg-primary" />
@@ -49,11 +57,9 @@ export const Welcome = () => {
               height={1280}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            {/* Neon gradient overlay on hover */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-60 transition-opacity duration-500 mix-blend-overlay pointer-events-none"
               style={{ background: "linear-gradient(135deg, #39FF14 0%, #00F0FF 35%, #B026FF 70%, #FF00E5 100%)" }}
             />
-            {/* Animated neon scan line */}
             <div className="absolute inset-x-0 -top-1 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"
               style={{ background: "linear-gradient(90deg, transparent, #39FF14, #00F0FF, #B026FF, transparent)", boxShadow: "0 0 20px #00F0FF" }}
             />
