@@ -24,12 +24,12 @@ const MinistryCard = ({ m, index }: { m: typeof ministries[0]; index: number }) 
       ref={ref}
       key={m.name}
       href="#ministries"
-      className={`group relative rounded-3xl overflow-hidden ${m.span} transition-all duration-700 ease-out ${
+      className={`group relative rounded-3xl overflow-hidden ${m.span} transition-all duration-1000 ease-in-out ${
         isVisible
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-12"
+          ? "opacity-100 translate-y-0 scale-100"
+          : "opacity-0 translate-y-16 scale-95"
       }`}
-      style={{ transitionDelay: `${index * 100}ms` }}
+      style={{ transitionDelay: isVisible ? `${index * 120}ms` : '0ms' }}
     >
       <img
         src={m.img}
