@@ -1,32 +1,32 @@
 import { ArrowUpRight, MapPin } from "lucide-react";
-import servanthood from "@/assets/photo-congregation.jpg";
-import thornCrown from "@/assets/event-thorn-crown.jpg";
-import easter from "@/assets/photo-singer.jpg";
+import servanthood from "@/assets/event-servanthood.png";
+import thornCrown from "@/assets/event-good-friday.png";
+import easter from "@/assets/event-women-conference.png";
 
 const events = [
   {
     img: servanthood,
-    date: { d: "03", m: "MAY" },
+    date: { d: "14", m: "FEB" },
     tag: "Seminar",
-    title: "Servanthood and Leadership Seminar",
-    location: "GGC Mmabatho",
-    desc: "A practical seminar on serving with humility and leading with purpose. All members welcome.",
+    title: "Servanthood & Leadership Seminar",
+    location: "GGC Mahikeng, 6895 Cydonia Street",
+    desc: "A practical seminar on serving with humility and leading with purpose. Hosted by Ps Giet Khoza.",
   },
   {
     img: thornCrown,
-    date: { d: "18", m: "APR" },
+    date: { d: "03", m: "APR" },
     tag: "Good Friday",
     title: "Good Friday — The Message of the Cross",
-    location: "GGC Mmabatho",
-    desc: "Reflect on the sacrifice of Christ. A solemn evening service of worship, scripture and communion.",
+    location: "GGC Mahikeng, Mmabatho",
+    desc: "Reflect on the sacrifice of Christ. A solemn morning service of worship, scripture and communion at 9AM.",
   },
   {
     img: easter,
-    date: { d: "20", m: "APR" },
-    tag: "Easter Sunday",
-    title: "Easter Sunday Service by Pastor Sefanyetso",
-    location: "GGC Mmabatho",
-    desc: "Celebrate the resurrection of our Lord. A powerful Easter Sunday gathering led by Pastor Sefanyetso.",
+    date: { d: "28", m: "MAR" },
+    tag: "Conference",
+    title: "Woman to Woman Conference 2025",
+    location: "GGC Mahikeng, Mmabatho",
+    desc: "A powerful women's conference hosted by Pastor Grace Tlalang with guest speakers. Registration R200.",
   },
 ];
 
@@ -54,7 +54,7 @@ export const Events = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {events.map((e) => (
             <article key={e.title} className="group bg-card rounded-3xl overflow-hidden border border-border hover-lift flex flex-col">
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-square overflow-hidden">
                 <img
                   src={e.img}
                   alt={e.title}

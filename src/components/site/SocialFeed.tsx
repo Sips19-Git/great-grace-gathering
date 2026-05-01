@@ -42,7 +42,9 @@ const RotatingTile = ({ pool, delay }: { pool: string[]; delay: number }) => {
   return (
     <a
       ref={ref}
-      href="#"
+      href="https://www.instagram.com/greatgracechurch/"
+      target="_blank"
+      rel="noopener noreferrer"
       className={`group relative aspect-square rounded-2xl overflow-hidden bg-ink transition-all duration-700 ease-in-out ${
         isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-95"
       }`}
@@ -90,7 +92,9 @@ export const SocialFeed = () => {
             </h2>
           </div>
           <a
-            href="#"
+            href="https://www.instagram.com/greatgracechurch/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-foreground text-background px-5 py-3 rounded-full font-semibold hover:bg-primary transition-colors self-start md:self-end"
           >
             <Instagram className="w-4 h-4" /> Follow on Instagram

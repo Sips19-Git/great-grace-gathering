@@ -61,11 +61,11 @@ export const Hero = () => {
 
       <div className="relative z-10 max-w-site mx-auto container-x pt-32 md:pt-40 pb-16 min-h-[100svh] flex flex-col justify-end">
         <div className="grid grid-cols-12 gap-6 items-end">
-          <div className="col-span-12 lg:col-span-8 reveal">
+          <div className="col-span-12 reveal">
             <p className="font-italiana text-cream-deep text-xl md:text-2xl mb-6 italic">
               — Transforming lives through the gospel to impact the community
             </p>
-            <h1 className="font-display text-[15vw] md:text-[10vw] lg:text-[8rem] leading-[0.9] tracking-tighter uppercase" style={{ fontWeight: 900 }}>
+            <h1 className="font-display text-[18vw] md:text-[13vw] lg:text-[11rem] leading-[0.85] tracking-tighter uppercase" style={{ fontWeight: 900 }}>
               Courageous<span className="text-primary">.</span>
               <br />
               Faith<span className="text-primary">.</span>
@@ -74,7 +74,7 @@ export const Hero = () => {
             </h1>
           </div>
 
-          <div className="col-span-12 lg:col-span-4 lg:pb-4 reveal" style={{ animationDelay: "0.15s" }}>
+          <div className="col-span-12 lg:pb-4 reveal" style={{ animationDelay: "0.15s" }}>
             <p className="text-white/80 text-base md:text-lg max-w-md mb-8 leading-relaxed">
               We're Great Grace — a Spirit-led community gathering across the city to worship,
               grow, and serve. No matter where you're starting from, there's a seat saved for you.

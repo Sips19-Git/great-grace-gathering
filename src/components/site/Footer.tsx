@@ -71,10 +71,17 @@ export const Footer = () => {
           <div className="col-span-12 lg:col-span-2">
             <h3 className="text-xs tracking-[0.2em] uppercase text-foreground font-bold mb-5">Follow</h3>
             <div className="flex flex-wrap gap-2">
-              {[Facebook, Instagram, Youtube, Music2].map((Icon, i) => (
+              {[
+                { Icon: Facebook, href: "#" },
+                { Icon: Instagram, href: "https://www.instagram.com/greatgracechurch/" },
+                { Icon: Youtube, href: "#" },
+                { Icon: Music2, href: "#" },
+              ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                   aria-label="Social link"
                   className="w-10 h-10 rounded-full border border-border grid place-items-center hover:bg-primary hover:text-white hover:border-primary transition-colors"
                 >
