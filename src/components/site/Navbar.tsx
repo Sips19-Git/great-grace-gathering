@@ -32,16 +32,16 @@ export const Navbar = () => {
         }`}
       >
         <nav className="max-w-site mx-auto container-x flex items-center justify-between h-16 md:h-20">
-          <a href="#home" className="flex items-center gap-2 group">
-            <span className="w-9 h-9 rounded-full bg-primary text-primary-foreground grid place-items-center font-display text-xl">
-              G
+          <a href="#home" className="flex items-center gap-2.5 group">
+            <span className="w-10 h-10 rounded-xl bg-primary text-primary-foreground grid place-items-center font-display text-lg font-bold tracking-tight shadow-md">
+              GGC
             </span>
             <span
               className={`font-display text-xl tracking-wide transition-colors ${
                 scrolled ? "text-foreground" : "text-white"
               }`}
             >
-              GREAT GRACE
+              GREAT GRACE CHURCH
             </span>
           </a>
 
@@ -88,7 +88,12 @@ export const Navbar = () => {
         }`}
       >
         <div className="container-x flex items-center justify-between h-16 md:h-20">
-          <span className="font-display text-xl">GREAT GRACE</span>
+          <div className="flex items-center gap-2.5">
+            <span className="w-10 h-10 rounded-xl bg-primary text-primary-foreground grid place-items-center font-display text-lg font-bold tracking-tight">
+              GGC
+            </span>
+            <span className="font-display text-xl">GREAT GRACE CHURCH</span>
+          </div>
           <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2">
             <X className="w-6 h-6" />
           </button>

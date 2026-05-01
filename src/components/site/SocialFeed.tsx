@@ -5,8 +5,10 @@ import c from "@/assets/photo-pastor.jpg";
 import d from "@/assets/photo-congregation.jpg";
 import e from "@/assets/photo-embrace.jpg";
 import f from "@/assets/photo-singer.jpg";
+import g from "@/assets/photo-prayer-service.jpg";
+import h from "@/assets/photo-joy.jpg";
 
-const tiles = [a, f, b, e, c, d, e, f];
+const tiles = [a, f, b, h, c, d, e, g];
 
 export const SocialFeed = () => {
   return (
@@ -33,7 +35,37 @@ export const SocialFeed = () => {
           </a>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {/* Sticky stacking cards */}
+        <div className="hidden md:block relative" style={{ height: `${tiles.length * 120 + 400}px` }}>
+          {tiles.map((src, i) => (
+            <div
+              key={i}
+              className="sticky top-24"
+              style={{ paddingTop: `${i * 30}px` }}
+            >
+              <div
+                className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-ink shadow-lift transition-transform duration-300"
+                style={{
+                  transform: `scale(${1 - i * 0.02})`,
+                  transformOrigin: "top center",
+                }}
+              >
+                <img
+                  src={src}
+                  alt={`Great Grace community moment ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-ink/0 hover:bg-ink/40 transition-colors grid place-items-center">
+                  <Instagram className="w-8 h-8 text-white opacity-0 hover:opacity-100 transition-opacity" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile grid fallback */}
+        <div className="grid grid-cols-2 gap-3 md:hidden">
           {tiles.map((src, i) => (
             <a
               key={i}

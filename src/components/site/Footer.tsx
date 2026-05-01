@@ -9,23 +9,27 @@ const cols = [
 export const Footer = () => {
   return (
     <footer id="visit" className="bg-cream/40 px-4 md:px-8 pb-8 pt-4">
-      <div className="max-w-site mx-auto bg-background rounded-[2rem] shadow-lift border border-border container-x py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-highlight/20 blur-3xl pointer-events-none" />
+      <div className="max-w-site mx-auto bg-background rounded-[2rem] shadow-[0_-10px_60px_-15px_hsl(0_0%_0%/0.25),0_30px_80px_-20px_hsl(6_67%_46%/0.15)] border border-border container-x py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-highlight/20 blur-3xl pointer-events-none" />
+
         {/* Big wordmark */}
-        <div className="mb-16">
-          <h2 className="font-display text-[18vw] md:text-[14vw] lg:text-[12rem] leading-none text-stroke">
+        <div className="mb-20 text-center">
+          <h2 className="font-display text-[16vw] md:text-[12vw] lg:text-[11rem] leading-none tracking-tight">
             GREAT GRACE
           </h2>
+          <p className="font-display text-[8vw] md:text-[6vw] lg:text-[5.5rem] leading-none text-primary -mt-2">
+            CHURCH
+          </p>
         </div>
 
         <div className="grid grid-cols-12 gap-10">
           <div className="col-span-12 lg:col-span-4">
-            <div className="flex items-center gap-2 mb-5">
-              <span className="w-9 h-9 rounded-full bg-primary text-primary-foreground grid place-items-center font-display text-xl">
-                G
+            <div className="flex items-center gap-2.5 mb-5">
+              <span className="w-10 h-10 rounded-xl bg-primary text-primary-foreground grid place-items-center font-display text-lg font-bold tracking-tight shadow-md">
+                GGC
               </span>
-              <span className="font-display text-xl tracking-wide">GREAT GRACE</span>
+              <span className="font-display text-xl tracking-wide">GREAT GRACE CHURCH</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-xs">
               A modern, Spirit-led church gathering across the city. Come as you are — leave changed.
