@@ -1,4 +1,4 @@
-# Remix of Grace Connect
+Great Grace Church 
 
 {
 
